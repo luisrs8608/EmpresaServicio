@@ -28,6 +28,14 @@ public class ServiciosCombos extends Servicios{
         this.descuento = descuento;
     }
 
+    public void agregarServicios(Servicios servicio){
+        this.servicios.add(servicio);
+    }
+
+    public void quitarServicios(Servicios servicio){
+        this.servicios.remove(servicio);
+    }
+
     @Override
     public double calcularPrecio() {
         double precio = 0.0;
