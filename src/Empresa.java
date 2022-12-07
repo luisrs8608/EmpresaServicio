@@ -12,6 +12,14 @@ public class Empresa {
         this.servicios = servicios;
     }
 
+    public void agregarServicios(Servicios servicio){
+        this.servicios.add(servicio);
+    }
+
+    public void quitarServicios(Servicios servicio){
+        this.servicios.remove(servicio);
+    }
+
     public String getRazonSocial() {
         return razonSocial;
     }
@@ -34,5 +42,11 @@ public class Empresa {
                 "razonSocial='" + razonSocial + '\'' +
                 ", servicios=" + servicios +
                 '}';
+    }
+
+    public void mostrarServiciosBrindados() {
+        for (Servicios servicio : this.servicios) {
+            System.out.println("Nombre: " + servicio.getNombre() + " precio: $" + servicio.calcularPrecio());
+        }
     }
 }
